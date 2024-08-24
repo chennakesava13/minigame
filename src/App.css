@@ -1,34 +1,227 @@
-.App {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+body {
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-h1 {
+.admin-dashboard {
+  display: flex;
+}
+
+.navbar {
+  width: 200px;
+  background-color: #2c3e50;
+  padding: 20px;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.navbar button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #34495e;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.navbar button:hover {
+  background-color: #1abc9c;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.kpi-container {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 20px;
 }
 
-form {
+.kpi-box {
+  flex: 1;
+  margin: 10px;
+  padding: 20px;
+  background-color: #ecf0f1;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.data-table th {
+  background-color: #f4f4f4;
+}
+
+.data-table td {
+  text-align: center;
+}
+
+button {
+  padding: 5px 10px;
+  margin: 5px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.login-page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ecf0f1;
+}
+
+.login-form {
+  background-color: white;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #2980b9;
+}
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.login-page {
+  max-width: 300px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.onebox {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-input {
-  margin-bottom: 10px;
-  padding: 8px;
-  font-size: 16px;
+.threads-list {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.threads-list div {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+
+.threads-list div:last-child {
+  border-bottom: none;
+}
+
+.thread-details {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 button {
+  margin-top: 10px;
   padding: 10px 20px;
-  font-size: 16px;
+  border: none;
+  background-color: #007bff;
+  color: white;
   cursor: pointer;
+  border-radius: 4px;
 }
 
-p {
-  margin-bottom: 10px;
+button:hover {
+  background-color: #0056b3;
+}
+
+.light {
+  background-color: white;
+  color: black;
+}
+
+.dark {
+  background-color: #333;
+  color: white;
+}
+
+.dark .threads-list,
+.dark .thread-details {
+  background-color: #444;
+  border-color: #555;
+}
+
+.dark textarea {
+  background-color: #555;
+  color: white;
+}
+
+.dark button {
+  background-color: #444;
+}
+
+.dark button:hover {
+  background-color: #222;
 }
